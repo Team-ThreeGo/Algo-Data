@@ -311,14 +311,14 @@ INSERT INTO Study_Member (study_id, member_id, role) VALUES
 (5, 2, 'MEMBER'),
 (5, 3, 'MEMBER'),
 (5, 4, 'MEMBER'),
-(5, 5, 'MEMBER'),
+(5, 5, 'NOT_MEMBER'),
 
 -- Study 6
 (6, 21, 'LEADER'),
 (6, 1, 'MEMBER'),
 (6, 2, 'MEMBER'),
 (6, 3, 'MEMBER'),
-(6, 4, 'MEMBER'),
+(6, 4, 'NOT_MEMBER'),
 
 -- Study 7
 (7, 23, 'LEADER'),
@@ -327,13 +327,13 @@ INSERT INTO Study_Member (study_id, member_id, role) VALUES
 (7, 3, 'MEMBER'),
 (7, 4, 'MEMBER'),
 (7, 5, 'MEMBER'),
-(7, 6, 'MEMBER'),
+(7, 6, 'NOT_MEMBER'),
 
 -- Study 8
 (8, 28, 'LEADER'),
 (8, 1, 'MEMBER'),
 (8, 2, 'MEMBER'),
-(8, 3, 'MEMBER'),
+(8, 3, 'NOT_MEMBER'),
 (8, 4, 'MEMBER'),
 
 -- Study 9
@@ -342,12 +342,12 @@ INSERT INTO Study_Member (study_id, member_id, role) VALUES
 (9, 2, 'MEMBER'),
 (9, 3, 'MEMBER'),
 (9, 4, 'MEMBER'),
-(9, 5, 'MEMBER'),
+(9, 5, 'NOT_MEMBER'),
 (9, 6, 'MEMBER'),
 (9, 7, 'MEMBER'),
 (9, 8, 'MEMBER'),
 (9, 9, 'MEMBER'),
-(9, 10, 'MEMBER'),
+(9, 10, 'NOT_MEMBER'),
 
 -- Study 10
 (10, 30, 'LEADER'),
@@ -358,7 +358,7 @@ INSERT INTO Study_Member (study_id, member_id, role) VALUES
 (10, 5, 'MEMBER'),
 (10, 6, 'MEMBER'),
 (10, 7, 'MEMBER'),
-(10, 8, 'MEMBER');
+(10, 8, 'NOT_MEMBER');
 
 INSERT INTO Study_Roadmap (study_id, member_id, title, description, `order`, created_at) VALUES
 -- Group 1
@@ -477,8 +477,8 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (1, 6, '코드 최적화 질문', '시간초과가 발생하는데 개선 아이디어 있나요?', 3, '2024-04-10 21:15:00', 'Y'),
 (1, 3, '문제 아이디어 공유', '문제 풀이 접근 방법을 다르게 해봤습니다.', 3, '2024-04-11 19:20:00', 'Y'),
 (1, 1, '다음 주 문제 공지', '백준 1234, 5678 문제를 풀어봅시다.', 3, '2024-04-12 10:00:00', 'Y'),
-(1, 2, '풀이 전략 회의록', '다음 모임 때 어떤 주제를 다룰지 정리했습니다.', 3, '2024-04-13 16:00:00', 'Y'),
-(1, 4, '1주차 후기', '문제가 어려웠지만 많이 배웠습니다.', 3, '2024-04-14 22:00:00', 'Y'),
+(1, 2, '풀이 전략 회의록', '다음 모임 때 어떤 주제를 다룰지 정리했습니다.', 3, '2024-04-13 16:00:00', 'N'),
+(1, 4, '1주차 후기', '문제가 어려웠지만 많이 배웠습니다.', 3, '2024-04-14 22:00:00', 'N'),
 
 -- Study 2 (study_id=2, member_id 예시: 7~11)
 (2, 7, '스터디 규칙 공유', '매주 월/목 문제 풀이합니다.', 3, '2024-04-09 09:00:00', 'Y'),
@@ -488,7 +488,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (2, 8, '질문 있습니다', '테스트케이스에서 실패하는 이유를 모르겠습니다.', 3, '2024-04-13 21:10:00', 'Y'),
 (2, 7, '다음 주차 문제 안내', '프로그래머스 43165, 42840 문제 풀 예정입니다.', 3, '2024-04-14 10:20:00', 'Y'),
 (2, 9, '스터디 회의록', '다음 모임에서 난이도 조정을 하기로 했습니다.', 3, '2024-04-15 15:00:00', 'Y'),
-(2, 10, '리뷰 요청', '제 풀이 코드 리뷰 부탁드립니다.', 3, '2024-04-16 19:30:00', 'Y'),
+(2, 10, '리뷰 요청', '제 풀이 코드 리뷰 부탁드립니다.', 3, '2024-04-16 19:30:00', 'N'),
 
 -- Study 3 (study_id=3, member_id 예시: 12~18)
 (3, 12, '스터디 계획서', '이번 스터디는 SQL 위주로 진행합니다.', 3, '2024-04-13 14:30:00', 'Y'),
@@ -497,7 +497,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (3, 15, 'GROUP BY 문제 질문', '집계 함수 문제 풀이 중 막혔습니다.', 3, '2024-04-16 20:20:00', 'Y'),
 (3, 16, '서브쿼리 연습', '서브쿼리 문제 풀이 공유', 3, '2024-04-17 13:45:00', 'Y'),
 (3, 17, 'SQL 최적화 아이디어', '실행계획 확인하는 법 정리', 3, '2024-04-18 11:00:00', 'Y'),
-(3, 18, '실전 문제 후기', '실제 코테 SQL 문제 연습 후기', 3, '2024-04-19 21:30:00', 'Y'),
+(3, 18, '실전 문제 후기', '실제 코테 SQL 문제 연습 후기', 3, '2024-04-19 21:30:00', 'N'),
 (3, 14, '스터디 공지', '다음 주차에는 ERD 설계 연습합니다.', 3, '2024-04-20 15:00:00', 'Y'),
 
 -- Study 4
@@ -507,7 +507,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (4, 22, '기출문제 분석', '문제 유형별 출제 패턴을 정리했습니다.', 3, '2024-04-20 15:00:00', 'Y'),
 (4, 19, '다음 모임 안내', '이번 주말 모의고사 예정입니다.', 3, '2024-04-21 10:30:00', 'Y'),
 (4, 20, '풀이 비교', '같은 문제를 다른 접근법으로 풀어봤습니다.', 3, '2024-04-22 21:00:00', 'Y'),
-(4, 21, '스터디 회의록', '스터디 규칙을 약간 수정했습니다.', 3, '2024-04-23 17:45:00', 'Y'),
+(4, 21, '스터디 회의록', '스터디 규칙을 약간 수정했습니다.', 3, '2024-04-23 17:45:00', 'N'),
 (4, 22, '2주차 후기', '문제 난이도가 상당히 높았습니다.', 3, '2024-04-24 22:15:00', 'Y'),
 
 -- Study 5
@@ -517,7 +517,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (5, 26, '풀이 리뷰', '제가 제출한 풀이 코드 리뷰 부탁드려요.', 3, '2024-04-25 11:00:00', 'Y'),
 (5, 27, '모의고사 후기', '실전 같은 환경에서 해보니 긴장됐습니다.', 3, '2024-04-26 14:15:00', 'Y'),
 (5, 28, '스터디 일정 공지', '다음 주에는 2023 기출 문제를 풉니다.', 3, '2024-04-27 16:00:00', 'Y'),
-(5, 24, '문제 접근법 공유', '다른 방식으로 푼 코드를 올려봅니다.', 3, '2024-04-28 20:30:00', 'Y'),
+(5, 24, '문제 접근법 공유', '다른 방식으로 푼 코드를 올려봅니다.', 3, '2024-04-28 20:30:00', 'N'),
 (5, 23, '스터디 중간 점검', '진도와 참여도 점검 결과를 공유합니다.', 3, '2024-04-29 19:45:00', 'Y'),
 
 -- Study 6
@@ -527,15 +527,15 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (6, 32, '풀이 전략 정리', '같은 문제를 다른 방식으로 풀었습니다.', 3, '2024-04-30 15:20:00', 'Y'),
 (6, 33, '모의고사 후기', '실전 대비 모의고사 체감 난이도 공유합니다.', 3, '2024-05-01 22:15:00', 'Y'),
 (6, 29, '다음 문제 안내', '다음 주 문제는 4개입니다.', 3, '2024-05-02 10:00:00', 'Y'),
-(6, 31, '스터디 회의록', '문제 풀이 규칙을 정리했습니다.', 3, '2024-05-03 13:00:00', 'Y'),
+(6, 31, '스터디 회의록', '문제 풀이 규칙을 정리했습니다.', 3, '2024-05-03 13:00:00', 'N'),
 (6, 32, '후기 공유', '스터디 진행 방식이 마음에 듭니다.', 3, '2024-05-04 19:30:00', 'Y'),
 
 -- Study 7
 (7, 34, '스터디 OT', '구글 인터뷰 대비 시작합니다.', 3, '2024-05-02 09:00:00', 'Y'),
 (7, 35, 'Easy 문제 풀이', '2문제 풀이 코드 올립니다.', 3, '2024-05-03 20:00:00', 'Y'),
 (7, 36, 'Medium 난이도 도전', '풀이 방법 논의가 필요합니다.', 3, '2024-05-04 21:30:00', 'Y'),
-(7, 37, '하드 난이도 문제', '시간 내에 풀기 힘들었습니다.', 3, '2024-05-05 11:00:00', 'Y'),
-(7, 38, '리뷰 요청', '제 코드가 맞는지 확인 부탁드립니다.', 3, '2024-05-06 19:15:00', 'Y'),
+(7, 37, '하드 난이도 문제', '시간 내에 풀기 힘들었습니다.', 3, '2024-05-05 11:00:00', 'N'),
+(7, 38, '리뷰 요청', '제 코드가 맞는지 확인 부탁드립니다.', 3, '2024-05-06 19:15:00', 'N'),
 (7, 39, '스터디 일정 공지', '다음 모임에서 중간 난이도 문제 풉니다.', 3, '2024-05-07 10:20:00', 'Y'),
 (7, 40, '스터디 후기', '이번 주차 학습이 유익했습니다.', 3, '2024-05-08 13:40:00', 'Y'),
 (7, 34, '다음 주차 안내', '다음 주에는 구글 기출문제를 풉니다.', 3, '2024-05-09 09:00:00', 'Y'),
@@ -548,7 +548,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (8, 45, '응용 문제 풀이', 'DFS + 백트래킹 문제 공유', 3, '2024-05-15 19:30:00', 'Y'),
 (8, 41, '스터디 회의록', '문제 난이도를 점검했습니다.', 3, '2024-05-16 16:20:00', 'Y'),
 (8, 42, '문제 추천', '탐색 알고리즘 관련 좋은 문제 추천합니다.', 3, '2024-05-17 20:50:00', 'Y'),
-(8, 43, '후기 공유', '이번 주 학습이 큰 도움이 됐습니다.', 3, '2024-05-18 21:30:00', 'Y'),
+(8, 43, '후기 공유', '이번 주 학습이 큰 도움이 됐습니다.', 3, '2024-05-18 21:30:00', 'N'),
 
 -- Study 9
 (9, 46, '스터디 시작', '자료구조 복습부터 시작합니다.', 3, '2024-05-16 09:00:00', 'Y'),
@@ -558,7 +558,7 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (9, 50, '정렬 문제 풀이', '퀵정렬 문제 코드 리뷰 부탁드려요.', 3, '2024-05-20 13:00:00', 'Y'),
 (9, 51, '탐색 문제 풀이', '이분탐색 풀이 코드입니다.', 3, '2024-05-21 15:40:00', 'Y'),
 (9, 52, '스터디 회의록', '이번 주 진도를 공유합니다.', 3, '2024-05-22 10:30:00', 'Y'),
-(9, 53, '후기 공유', '자료구조 복습이 큰 도움이 됐습니다.', 3, '2024-05-23 21:00:00', 'Y'),
+(9, 53, '후기 공유', '자료구조 복습이 큰 도움이 됐습니다.', 3, '2024-05-23 21:00:00', 'N'),
 
 -- Study 10
 (10, 57, '스터디 시작 안내', '종합 코테 대비반 OT입니다.', 3, '2024-06-06 09:00:00', 'Y'),
@@ -567,58 +567,58 @@ INSERT INTO Study_Post (study_id, member_id, title, content, comment_count, crea
 (10, 60, '프로그래머스 문제 풀이', 'Lv3 문제 풀이 코드 올립니다.', 3, '2024-06-09 19:30:00', 'Y'),
 (10, 61, 'SWEA 문제 풀이', '문제 풀이 및 코드 리뷰 요청합니다.', 3, '2024-06-10 11:20:00', 'Y'),
 (10, 62, '스터디 공지', '다음 주 모의고사 일정을 공지합니다.', 3, '2024-06-11 15:00:00', 'Y'),
-(10, 63, '스터디 회의록', '참여자 의견을 정리했습니다.', 3, '2024-06-12 13:45:00', 'Y'),
+(10, 63, '스터디 회의록', '참여자 의견을 정리했습니다.', 3, '2024-06-12 13:45:00', 'N'),
 (10, 64, '후기 공유', '스터디 진행 방식이 매우 만족스럽습니다.', 3, '2024-06-13 21:00:00', 'Y');
 
 
 
-INSERT INTO Study_Post_Image (post_id, image_url, created_at) VALUES
-(2, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-01 10:00:00'),
-(5, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-01 11:00:00'),
-(8, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-02 09:30:00'),
-(11, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-02 10:15:00'),
-(15, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-02 11:00:00'),
-(18, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-03 09:00:00'),
-(21, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-03 09:40:00'),
-(25, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-03 10:20:00'),
-(28, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-04 09:00:00'),
-(32, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-04 09:30:00'),
+INSERT INTO Study_Post_Image (post_id, image_url) VALUES
+(2, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(5, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(8, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(11, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(15, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(18, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(21, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(25, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(28, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(32, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
 
-(35, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-04 10:00:00'),
-(38, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-04 10:45:00'),
-(41, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-05 09:00:00'),
-(45, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-05 10:00:00'),
-(48, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-05 11:00:00'),
-(51, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-06 09:00:00'),
-(55, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-06 10:00:00'),
-(58, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-06 11:00:00'),
-(62, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-07 09:00:00'),
-(65, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-07 10:00:00'),
+(35, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(38, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(41, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(45, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(48, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(51, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(55, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(58, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(62, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(65, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
 
-(68, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-07 11:00:00'),
-(71, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-08 09:00:00'),
-(74, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-08 10:00:00'),
-(77, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-08 11:00:00'),
-(80, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-09 09:00:00'),
+(68, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(71, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(74, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(77, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(80, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
 
-(12, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-09 10:00:00'),
-(36, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-09 11:00:00'),
-(53, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-10 09:00:00'),
-(66, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-10 10:00:00'),
-(79, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU', '2024-07-10 11:00:00');
+(12, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(36, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(53, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(66, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU'),
+(79, 'https://fastly.picsum.photos/id/1001/200/300.jpg?hmac=nQhEVl6C7qyfiRmcIe41BohR4WBcN1yhONnlCJryahU');
 
 INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, visibility) VALUES
 -- study 1
 (1, 2, NULL, '첫 모임 기대됩니다!', '2024-04-07 10:00:00', 'Y'),
 (1, 3, NULL, '자료 잘 확인했습니다.', '2024-04-07 12:00:00', 'Y'),
-(1, 1, 1, '화이팅입니다!', '2024-04-07 13:00:00', 'Y'),
+(1, 1, 1, '화이팅입니다!', '2024-04-07 13:00:00', 'N'),
 
 (2, 4, NULL, '문제가 쉽지 않네요.', '2024-04-08 09:00:00', 'Y'),
 (2, 5, NULL, '풀이 공유 감사합니다.', '2024-04-08 10:30:00', 'Y'),
 (2, 3, 4, '같이 풀어보죠!', '2024-04-08 11:00:00', 'Y'),
 
 (3, 6, NULL, '시간복잡도 설명 이해됐습니다.', '2024-04-09 09:30:00', 'Y'),
-(3, 2, NULL, '예제 덕분에 정리됐습니다.', '2024-04-09 11:20:00', 'Y'),
+(3, 2, NULL, '예제 덕분에 정리됐습니다.', '2024-04-09 11:20:00', 'N'),
 (3, 1, 7, '좋습니다, 더 연습해봅시다.', '2024-04-09 12:00:00', 'Y'),
 
 (4, 3, NULL, 'DP 문제는 재밌네요.', '2024-04-10 21:00:00', 'Y'),
@@ -627,7 +627,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 -- Post 5
 (5, 6, NULL, '피보나치 DP 어렵네요.', '2024-04-11 09:00:00', 'Y'),
-(5, 4, NULL, '저는 탑다운으로 풀었습니다.', '2024-04-11 09:30:00', 'Y'),
+(5, 4, NULL, '저는 탑다운으로 풀었습니다.', '2024-04-11 09:30:00', 'N'),
 (5, 1, 13, '좋습니다. 다음에도 연습해요.', '2024-04-11 10:00:00', 'Y'),
 
 (6, 2, NULL, '코드 최적화 팁 있나요?', '2024-04-12 09:00:00', 'Y'),
@@ -639,7 +639,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (7, 1, 19, '더 발전시켜봅시다.', '2024-04-13 11:00:00', 'Y'),
 
 (8, 3, NULL, '다음 주 문제 공지 확인했습니다.', '2024-04-14 09:00:00', 'Y'),
-(8, 4, NULL, '예습하겠습니다.', '2024-04-14 10:00:00', 'Y'),
+(8, 4, NULL, '예습하겠습니다.', '2024-04-14 10:00:00', 'N'),
 (8, 1, 22, '좋습니다, 열심히 해봐요.', '2024-04-14 11:00:00', 'Y'),
 
 -- study 2
@@ -659,7 +659,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (12, 3, NULL, '코드 구조가 깔끔합니다.', '2024-04-18 10:00:00', 'Y'),
 (12, 1, 34, '저도 비슷하게 풀었습니다.', '2024-04-18 11:00:00', 'Y'),
 
-(13, 5, NULL, '스터디 분위기가 좋네요.', '2024-04-19 09:00:00', 'Y'),
+(13, 5, NULL, '스터디 분위기가 좋네요.', '2024-04-19 09:00:00', 'N'),
 (13, 14, NULL, '문제가 어렵지만 해볼만 했습니다.', '2024-04-19 10:00:00', 'Y'),
 (13, 6, 37, '저도 같은 생각입니다.', '2024-04-19 11:00:00', 'Y'),
 
@@ -673,7 +673,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (16, 6, NULL, '코드 리뷰 감사합니다.', '2024-04-22 09:00:00', 'Y'),
 (16, 3, NULL, '리뷰 내용 참고하겠습니다.', '2024-04-22 10:00:00', 'Y'),
-(16, 14, 46, '다음에도 코드 올려주세요.', '2024-04-22 11:00:00', 'Y'),
+(16, 14, 46, '다음에도 코드 올려주세요.', '2024-04-22 11:00:00', 'N'),
 
 -- study 3
 (17, 2, NULL, '스터디 첫 모임 준비 완료했습니다.', '2024-04-23 09:00:00', 'Y'),
@@ -682,7 +682,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (18, 6, NULL, '그래프 탐색 문제 어려웠습니다.', '2024-04-24 09:00:00', 'Y'),
 (18, 7, NULL, 'DFS와 BFS 비교가 흥미로웠습니다.', '2024-04-24 10:00:00', 'Y'),
-(18, 1, 52, '추가 자료 준비하겠습니다.', '2024-04-24 11:00:00', 'Y'),
+(18, 1, 52, '추가 자료 준비하겠습니다.', '2024-04-24 11:00:00', 'N'),
 
 (19, 4, NULL, '동적 계획법 문제 풀이 감사합니다.', '2024-04-25 09:00:00', 'Y'),
 (19, 2, NULL, '점화식 유도가 잘 됐네요.', '2024-04-25 10:00:00', 'Y'),
@@ -694,7 +694,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (21, 7, NULL, '스터디 토론이 재밌네요.', '2024-04-27 09:00:00', 'Y'),
 (21, 2, NULL, '다양한 풀이를 들어볼 수 있어서 좋습니다.', '2024-04-27 10:00:00', 'Y'),
-(21, 16, 61, '다음에도 토론식으로 진행하죠.', '2024-04-27 11:00:00', 'Y'),
+(21, 16, 61, '다음에도 토론식으로 진행하죠.', '2024-04-27 11:00:00', 'N'),
 
 (22, 4, NULL, '분할정복 문제 흥미로웠습니다.', '2024-04-28 09:00:00', 'Y'),
 (22, 5, NULL, '이진 탐색과 유사하네요.', '2024-04-28 10:00:00', 'Y'),
@@ -702,7 +702,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (23, 6, NULL, '이분 탐색 응용 문제도 괜찮네요.', '2024-04-29 09:00:00', 'Y'),
 (23, 7, NULL, 'Lower/Upper Bound 차이를 알게 됐습니다.', '2024-04-29 10:00:00', 'Y'),
-(23, 2, 67, '정리 자료도 올리겠습니다.', '2024-04-29 11:00:00', 'Y'),
+(23, 2, 67, '정리 자료도 올리겠습니다.', '2024-04-29 11:00:00', 'N'),
 
 (24, 5, NULL, '최단 경로 문제 풀이 잘 봤습니다.', '2024-04-30 09:00:00', 'Y'),
 (24, 4, NULL, '다익스트라 알고리즘 이해됐습니다.', '2024-04-30 10:00:00', 'Y'),
@@ -726,7 +726,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (28, 1, 82, '맞습니다. 추가 예제 찾아보겠습니다.', '2024-05-04 11:00:00', 'Y'),
 
 (29, 1, NULL, '동적 계획법 연습이 필요하네요.', '2024-05-05 09:00:00', 'Y'),
-(29, 2, NULL, '점화식 세우기가 관건이네요.', '2024-05-05 10:00:00', 'Y'),
+(29, 2, NULL, '점화식 세우기가 관건이네요.', '2024-05-05 10:00:00', 'N'),
 (29, 17, 85, '다음 모임에서 같이 다뤄봅시다.', '2024-05-05 11:00:00', 'Y'),
 
 (30, 3, NULL, '탐색 문제 풀이 공유 감사합니다.', '2024-05-06 09:00:00', 'Y'),
@@ -738,7 +738,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (31, 1, 91, '프림 알고리즘도 복습하죠.', '2024-05-07 11:00:00', 'Y'),
 
 (32, 1, NULL, '마지막 포스트 확인했습니다.', '2024-05-08 09:00:00', 'Y'),
-(32, 2, NULL, '스터디 덕분에 많이 배웠습니다.', '2024-05-08 10:00:00', 'Y'),
+(32, 2, NULL, '스터디 덕분에 많이 배웠습니다.', '2024-05-08 10:00:00', 'N'),
 (32, 17, 94, '수고 많으셨습니다!', '2024-05-08 11:00:00', 'Y'),
 
 -- study 5
@@ -750,8 +750,8 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (34, 4, NULL, '이진 탐색과 유사한 점이 흥미롭습니다.', '2024-05-10 10:00:00', 'Y'),
 (34, 19, 100, '예제 자료도 추가해드리겠습니다.', '2024-05-10 11:00:00', 'Y'),
 
-(35, 5, NULL, '동적 계획법 문제 어렵지만 유익했습니다.', '2024-05-11 09:00:00', 'Y'),
-(35, 2, NULL, '점화식 세우는 법을 익힐 수 있었어요.', '2024-05-11 10:00:00', 'Y'),
+(35, 5, NULL, '동적 계획법 문제 어렵지만 유익했습니다.', '2024-05-11 09:00:00', 'N'),
+(35, 2, NULL, '점화식 세우는 법을 익힐 수 있었어요.', '2024-05-11 10:00:00', 'N'),
 (35, 19, 103, '응용 문제도 풀어봅시다.', '2024-05-11 11:00:00', 'Y'),
 
 (36, 3, NULL, '그래프 탐색은 여전히 어렵네요.', '2024-05-12 09:00:00', 'Y'),
@@ -766,7 +766,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (38, 3, NULL, '중위 순회 구현이 직관적이었습니다.', '2024-05-14 10:00:00', 'Y'),
 (38, 19, 112, '레벨 순회도 연습합시다.', '2024-05-14 11:00:00', 'Y'),
 
-(39, 4, NULL, '세그먼트 트리 풀이 유익했습니다.', '2024-05-15 09:00:00', 'Y'),
+(39, 4, NULL, '세그먼트 트리 풀이 유익했습니다.', '2024-05-15 09:00:00', 'N'),
 (39, 1, NULL, '쿼리 처리 속도가 빨랐습니다.', '2024-05-15 10:00:00', 'Y'),
 (39, 19, 115, 'Lazy Propagation도 연습해봅시다.', '2024-05-15 11:00:00', 'Y'),
 
@@ -776,7 +776,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 -- study 6
 (41, 2, NULL, '첫 문제 풀이 공유 감사합니다.', '2024-05-17 09:00:00', 'Y'),
-(41, 3, NULL, '코드가 이해하기 쉬웠습니다.', '2024-05-17 10:00:00', 'Y'),
+(41, 3, NULL, '코드가 이해하기 쉬웠습니다.', '2024-05-17 10:00:00', 'N'),
 (41, 21, 121, '좋습니다. 다 같이 힘내봅시다.', '2024-05-17 11:00:00', 'Y'),
 
 (42, 1, NULL, '재귀 함수 문제 흥미로웠습니다.', '2024-05-18 09:00:00', 'Y'),
@@ -809,7 +809,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 -- study 7
 (49, 2, NULL, '첫 모임 분위기가 정말 좋았습니다.', '2024-05-25 09:00:00', 'Y'),
-(49, 3, NULL, '공유해주신 문제 풀이가 유익했어요.', '2024-05-25 10:00:00', 'Y'),
+(49, 3, NULL, '공유해주신 문제 풀이가 유익했어요.', '2024-05-25 10:00:00', 'N'),
 (49, 23, 145, '앞으로도 잘 부탁드립니다!', '2024-05-25 11:00:00', 'Y'),
 
 (50, 1, NULL, '재귀 문제 풀이가 직관적이네요.', '2024-05-26 09:00:00', 'Y'),
@@ -820,7 +820,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 (51, 6, NULL, '퀵 정렬과 병합 정렬 비교가 인상적이었어요.', '2024-05-27 10:00:00', 'Y'),
 (51, 23, 151, '추가 예제도 준비해드리겠습니다.', '2024-05-27 11:00:00', 'Y'),
 
-(52, 2, NULL, '그래프 탐색은 여전히 어렵네요.', '2024-05-28 09:00:00', 'Y'),
+(52, 2, NULL, '그래프 탐색은 여전히 어렵네요.', '2024-05-28 09:00:00', 'N'),
 (52, 3, NULL, '노드 수가 많을 때 시간복잡도가 중요하네요.', '2024-05-28 10:00:00', 'Y'),
 (52, 23, 154, 'BFS와 DFS를 비교해보면 좋겠습니다.', '2024-05-28 11:00:00', 'Y'),
 
@@ -884,14 +884,14 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (67, 6, NULL, '정렬 알고리즘 연습이 도움됐습니다.', '2024-06-12 09:00:00', 'Y'),
 (67, 7, NULL, '퀵 정렬과 힙 정렬 비교가 인상적이었어요.', '2024-06-12 10:00:00', 'Y'),
-(67, 29, 199, '다음엔 병합 정렬도 해봅시다.', '2024-06-12 11:00:00', 'Y'),
+(67, 29, 199, '다음엔 병합 정렬도 해봅시다.', '2024-06-12 11:00:00', 'N'),
 
 (68, 8, NULL, '그래프 탐색 문제는 여전히 어렵네요.', '2024-06-13 09:00:00', 'Y'),
 (68, 9, NULL, 'DFS와 BFS 차이가 잘 보였습니다.', '2024-06-13 10:00:00', 'Y'),
 (68, 29, 202, '추가 문제도 공유드리겠습니다.', '2024-06-13 11:00:00', 'Y'),
 
 (69, 10, NULL, '동적 계획법 문제 재밌었습니다.', '2024-06-14 09:00:00', 'Y'),
-(69, 1, NULL, '점화식 유도가 흥미로웠습니다.', '2024-06-14 10:00:00', 'Y'),
+(69, 1, NULL, '점화식 유도가 흥미로웠습니다.', '2024-06-14 10:00:00', 'N'),
 (69, 29, 205, '응용 문제도 다뤄봅시다.', '2024-06-14 11:00:00', 'Y'),
 
 (70, 2, NULL, '탐색 문제 풀이 깔끔했습니다.', '2024-06-15 09:00:00', 'Y'),
@@ -900,7 +900,7 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (71, 4, NULL, '최소 신장 트리 문제 유익했습니다.', '2024-06-16 09:00:00', 'Y'),
 (71, 5, NULL, '크루스칼 알고리즘 코드가 깔끔했네요.', '2024-06-16 10:00:00', 'Y'),
-(71, 29, 211, '프림 알고리즘도 같이 복습합시다.', '2024-06-16 11:00:00', 'Y'),
+(71, 29, 211, '프림 알고리즘도 같이 복습합시다.', '2024-06-16 11:00:00', 'N'),
 
 (72, 6, NULL, '마지막 주차 문제 잘 풀었습니다.', '2024-06-17 09:00:00', 'Y'),
 (72, 7, NULL, '스터디 덕분에 많은 걸 배웠습니다.', '2024-06-17 10:00:00', 'Y'),
@@ -929,13 +929,13 @@ INSERT INTO Study_Comment (post_id, member_id, parent_id, content, created_at, v
 
 (78, 4, NULL, '탐색 문제 풀이가 깔끔했습니다.', '2024-06-23 09:00:00', 'Y'),
 (78, 5, NULL, '이진 탐색 구현이 이해하기 쉬웠습니다.', '2024-06-23 10:00:00', 'Y'),
-(78, 30, 232, '삼분 탐색도 도전해봅시다.', '2024-06-23 11:00:00', 'Y'),
+(78, 30, 232, '삼분 탐색도 도전해봅시다.', '2024-06-23 11:00:00', 'N'),
 
 (79, 6, NULL, '최소 신장 트리 문제 흥미로웠습니다.', '2024-06-24 09:00:00', 'Y'),
-(79, 7, NULL, '크루스칼 알고리즘 코드가 깔끔했어요.', '2024-06-24 10:00:00', 'Y'),
+(79, 7, NULL, '크루스칼 알고리즘 코드가 깔끔했어요.', '2024-06-24 10:00:00', 'N'),
 (79, 30, 235, '프림 알고리즘도 복습합시다.', '2024-06-24 11:00:00', 'Y'),
 
-(80, 8, NULL, '마지막 주차 문제까지 다 풀었습니다.', '2024-06-25 09:00:00', 'Y'),
+(80, 8, NULL, '마지막 주차 문제까지 다 풀었습니다.', '2024-06-25 09:00:00', 'N'),
 (80, 1, NULL, '스터디 덕분에 정말 많이 배웠습니다.', '2024-06-25 10:00:00', 'Y'),
 (80, 30, 238, '모두 고생 많으셨습니다!', '2024-06-25 11:00:00', 'Y');
 
