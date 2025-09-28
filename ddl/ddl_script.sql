@@ -150,7 +150,7 @@ CREATE TABLE `Algo_Post_Image` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `post_id` INT NOT NULL,
   `image_url` VARCHAR(255) NOT NULL,
-  `created_at` VARCHAR(20) NOT NULL,
+
   CONSTRAINT `FK_Algo_Post_TO_Algo_Post_Image` FOREIGN KEY (`post_id`) REFERENCES `Algo_Post`(`id`)
 );
 
@@ -249,7 +249,6 @@ CREATE TABLE `Coding_Post_Image` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `post_id` INT NOT NULL,
   `image_url` VARCHAR(255) NOT NULL,
-  `created_at` VARCHAR(20) NOT NULL,
   CONSTRAINT `FK_Coding_Post_TO_Coding_Post_Image` FOREIGN KEY (`post_id`) REFERENCES `Coding_Post`(`id`)
 );
 
