@@ -36,6 +36,7 @@ CREATE TABLE `Study_Recruit_Member` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `member_id` INT NOT NULL,
   `post_id` INT NOT NULL,
+  `applicant` VARCHAR(500) NOT NULL,
   `status` ENUM('PENDING','APPROVED','REJECTED') NOT NULL DEFAULT 'PENDING',
   CONSTRAINT `FK_Member_TO_Study_Recruit_Member` FOREIGN KEY (`member_id`) REFERENCES `Member`(`id`),
   CONSTRAINT `FK_Study_Recruit_Post_TO_Study_Recruit_Member` FOREIGN KEY (`post_id`) REFERENCES `Study_Recruit_Post`(`id`)
