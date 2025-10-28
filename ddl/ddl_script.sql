@@ -272,6 +272,8 @@ CREATE TABLE `Coding_Comment` (
 CREATE TABLE `Career_Info_Post` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `member_id` INT NOT NULL,
+  `company` ENUM('삼성전자','카카오','네이버','LG전자') NOT NULL,
+  `year` ENUM('2022','2023','2024','2025') NOT NULL,
   `title` VARCHAR(255) NOT NULL,
   `status` ENUM('NONE','PENDING','APPROVED','REJECTED') NOT NULL DEFAULT 'NONE',
   `reject_reason` VARCHAR(255) NULL,
